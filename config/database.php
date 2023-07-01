@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'db_pegawai',
 
     /*
     |--------------------------------------------------------------------------
@@ -41,6 +41,14 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+        'db_pegawai' => [
+            'driver' => 'mysql',
+            'host' =>'localhost',
+            'port' => 3306,
+            'database' => 'db_pegawai',
+            'username' => 'root',
+            'password' => '',
         ],
 
         'mysql' => [
