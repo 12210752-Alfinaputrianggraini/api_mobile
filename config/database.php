@@ -44,11 +44,11 @@ return [
         ],
         'db_pegawai' => [
             'driver' => 'mysql',
-            'host' =>'localhost',
+            'host' =>'194.233.85.141',
             'port' => 3306,
-            'database' => 'db_pegawai',
-            'username' => 'root',
-            'password' => '',
+            'database' => 'u28zka2l_db_pegawai',
+            'username' => 'u28zka2l_root',
+            'password' => 'dn@XepdJUGi3FYN',
         ],
 
         'mysql' => [
