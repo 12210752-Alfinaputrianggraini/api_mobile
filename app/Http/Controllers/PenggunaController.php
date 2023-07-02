@@ -13,15 +13,15 @@ use Stringable;
 class PenggunaController extends Controller
 {
     public function login(){
-        $email = request()->header('email');
+        $nip = request()->header('nip');
         $sandi = request()->header('sandi');
 
         $hasil = PenggunaModel::query()
-                ->where('email', $email)->first();
+                ->where('nip', $nip)->first();
 
         if($hasil == null){
             return response()->json([
-                'pesan' => "Email $email pengguna tidak terdaftar"
+                'pesan' => "nip $nip pengguna tidak terdaftar"
             ], 404);
         }else if (Hash:: check($sandi, $hasil->sandi)){
             $hasil->token = Str::class(16);
